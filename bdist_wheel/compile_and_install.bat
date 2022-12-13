@@ -14,4 +14,4 @@ for /f %%f in ('dir /ad /b HarfangHighLevel.egg-info\') do rd /s /q HarfangHighL
 
 python setup.py bdist_wheel --plat-name=win-amd64
 pip uninstall -y HarfangHighLevel
-pip install .\dist\HarfangHighLevel-3.2.4-py3-none-win_amd64.whl
+pip install .\dist\HarfangHighLevel-3.2.5-py3-none-win_amd64.whl

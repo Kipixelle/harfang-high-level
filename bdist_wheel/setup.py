@@ -54,5 +54,5 @@ setup(
     include_package_data=True,
     package_data={"HarfangHighLevel": extra_files},
     python_requires=">=3.8",
-    install_requires=["harfang==3.2.4", "tqdm", "py7zr"],
+    install_requires=["harfang==3.2.5", "tqdm", "py7zr"],
 )
