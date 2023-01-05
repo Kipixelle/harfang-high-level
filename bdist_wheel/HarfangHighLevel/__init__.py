@@ -755,7 +755,7 @@ def Add3DFile(
             else:
                 raise SystemError("Unsupported platform for assimp_converter")
 
-            command_line = f'{exe_path} {file_path} -profile pbr_physical -o {output_import_path}/ -base-resource-path "{output_assets_path} -material-policy overwrite -geometry-policy overwrite -texture-policy overwrite -scene-policy overwrite'
+            command_line = f'{exe_path} {file_path} -profile pbr_physical -o {output_import_path}/ -base-resource-path {output_assets_path} -material-policy overwrite -geometry-policy overwrite -texture-policy overwrite -scene-policy overwrite'
 
         p = subprocess.Popen(command_line.split())
         stream_data = p.communicate()[0]
@@ -1391,7 +1391,7 @@ def DrawQuad2D(
     tex_path: str = None,
     color: hl.Color = hl.Color.White,
     render_state: hl.RenderState = hl.ComputeRenderState(hl.BM_Alpha, hl.DT_Disabled),
-    depth: float = 0,
+    depth: float = 1,
     show_in_vr: bool = True,
 ):
     """Draws a 2d quad."""
